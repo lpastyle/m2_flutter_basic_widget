@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MainApp());
@@ -44,6 +43,29 @@ class BasicPage extends StatelessWidget {
             color: Colors.blueGrey,
             margin: const EdgeInsets.all(20),
           )
+        )
+      )
+      // bottomNavigationBar: ,
+      // floatingActionButton: ,
+      // bottomSheet: ,
+      // drawer: ,
+    );
+  }
+}
+
+ Image fromAssetImage({required double height, required double width}) {
+    var brightness = Theme.of(context).brightness;
+    // print("size=$size platform=$platform brightness=$brightness");
+    return Scaffold(
+      // appBar: ,
+      body: Center (
+        //child: fromAssetImage(height: size.height, width: size.width)
+        //child: fromNetworkImage()
+        child: Image.asset(
+          "images/beach.jpg", // à définir dans le pubspec.yaml
+          fit: BoxFit.fill,
+          height: 150,
+          width: 300,        
         )
       )
       // bottomNavigationBar: ,
