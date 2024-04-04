@@ -55,18 +55,24 @@ class BasicPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text("demo column,"),
+                Stack(
+                  alignment: Alignment.topCenter,
+                  children: [
+                    fromAssetImage(height: 200, width: size.width),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 160),
+                      child: profilePicture()
+                      ),
+                    
+                  ],
+                ),
                 Row (
                   mainAxisAlignment: MainAxisAlignment.start,
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     // fromAssetImage(height: 80, width: 80),
-                    const CircleAvatar(
-                      radius: 40,
-                      backgroundColor: Colors.redAccent,
-                      // foregroundImage: NetworkImage("https://images.pexels.com/photos/1756086/pexels-photo-1756086.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"),                  
-                      foregroundImage: AssetImage("images/beach.jpg"),
-                    ),
+                    profilePicture() ,
                     Expanded(
                       child: simpleText("Ligne")
                       ),
@@ -84,6 +90,16 @@ class BasicPage extends StatelessWidget {
       // drawer: ,
     );
   }
+}
+
+CircleAvatar profilePicture() {
+  return const CircleAvatar(
+           radius: 40,
+              backgroundColor: Colors.redAccent,
+              foregroundImage: NetworkImage("https://images.pexels.com/photos/1756086/pexels-photo-1756086.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"),                  
+              // foregroundImage: AssetImage("images/beach.jpg"),
+              // child: Text("LP"),
+                    );
 }
 
  Image fromAssetImage({required double height, required double width}) {
