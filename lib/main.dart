@@ -47,12 +47,16 @@ class BasicPage extends StatelessWidget {
         child: Card (
           elevation: 15,
           child: Padding(
-            padding: const EdgeInsets.all(50),
-            child: Image.network(
-               "https://images.pexels.com/photos/1756086/pexels-photo-1756086.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-               height: 300,
-               width: 200,
-             )
+            padding: const EdgeInsets.all(20),
+            child: Column (
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text("demo column,"),
+                fromNetworkImage(),
+                demoRichText()
+              ])
           )
         )
       )
