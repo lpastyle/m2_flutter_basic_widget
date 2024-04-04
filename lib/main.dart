@@ -34,11 +34,13 @@ class BasicPage extends StatelessWidget {
     return Scaffold(
       // appBar: ,
       body: Center (
-        child: Icon(
-          Icons.house,
-          size: size.width / 3,
-          color: Colors.lightGreen,
-          semanticLabel: "nom pour l'accessibilité",
+        //child: fromAssetImage(height: size.height, width: size.width)
+        //child: fromNetworkImage()
+        child: Image.asset(
+          "images/beach.jpg", // à définir dans le pubspec.yaml
+          fit: BoxFit.fill,
+          height: 150,
+          width: 300,        
         )
       )
       // bottomNavigationBar: ,
@@ -47,9 +49,24 @@ class BasicPage extends StatelessWidget {
       // drawer: ,
     );
   }
-
-
 }
+
+ Image fromAssetImage({required double height, required double width}) {
+    return Image.asset(
+      "images/beach.jpg", // à définir dans le pubspec.yaml
+      fit: BoxFit.cover,
+      height: height,
+      width: width,
+    );
+  }
+
+  Image fromNetworkImage() {
+    return Image.network(
+      "https://images.pexels.com/photos/1756086/pexels-photo-1756086.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      height: 200,
+      width: 100,
+    );
+  }
 
 Text demoRichText() {
   return const Text.rich(
