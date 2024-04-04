@@ -48,45 +48,49 @@ class BasicPage extends StatelessWidget {
           elevation: 15,
           child: Padding(
             padding: const EdgeInsets.all(20),
-            // mettre Row pour montrer le débordement
-            child: Column (
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text("demo column,"),
-                Stack(
-                  alignment: Alignment.topCenter,
-                  children: [
-                    fromAssetImage(height: 200, width: size.width),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 160),
-                      child: profilePicture()
-                      ),                
-                  ],
-                ),
-                const Divider(
-                  color: Colors.grey,
-                  height: 40,
-                  thickness: 2,
-                  indent: 20,
-                  endIndent: 15,
-                ),
-                Row (
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.max,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // fromAssetImage(height: 80, width: 80),
-                    profilePicture() ,
-                    Expanded(
-                      child: simpleText("Ligne")
+            child: SingleChildScrollView(
+              // mettre Row pour montrer le débordement
+              child: Column (
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text("demo column,"),
+                  Stack(
+                    alignment: Alignment.topCenter,
+                    children: [
+                      fromAssetImage(height: 200, width: size.width),
+                        Padding(
+                        padding: const EdgeInsets.only(top: 160),
+                        child: profilePicture()
+                        ),                
+                    ],
+                  ),
+                  const Divider(
+                    color: Colors.grey,
+                    height: 40,
+                    thickness: 2,
+                    indent: 20,
+                    endIndent: 15,
+                  ),
+                  Row (
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // fromAssetImage(height: 80, width: 80),
+                      profilePicture() ,
+                      Expanded(
+                        child: simpleText("Ligne")
                       ),
-                    const Icon(Icons.home, size: 30,)
-                  ]),
-                fromNetworkImage(),
-                demoRichText()
-              ])
+                      const Icon(Icons.home, size: 30,)
+                    ]),
+                  fromNetworkImage(),
+                  demoRichText(),
+                  // crée un débordement si pas de ScrollView
+                  fromAssetImage(height: 300, width: 300)
+                ])
+            )            
           )
         )
       )
