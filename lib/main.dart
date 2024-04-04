@@ -34,13 +34,29 @@ class BasicPage extends StatelessWidget {
     return  Scaffold(
       // appBar: ,
       body: Container(
-        height: 100,  // size.height
+        height: 200,  // size.height
         width: 300,  // size.width
         //color: const Color.fromARGB(255, 200, 35, 78),
         color: Colors.orangeAccent,
         //margin: const EdgeInsets.all(10),
         margin: const EdgeInsets.only(left:10, top:50),
-        child: simpleText("hello world !")
+        child: const Text.rich(
+          TextSpan(
+            text: "premier mot\n",
+            style: TextStyle(color: Colors.red, fontSize: 24),
+            children: [
+              TextSpan(
+                text: "Deuxième mot\n",
+                style: TextStyle(color: Colors.green, fontSize: 18,),                
+              ),
+              TextSpan(
+                text: "Troisième mot",
+                style: TextStyle(color: Colors.blue, fontSize: 32,),                
+              ),
+            ]
+          ),
+        textAlign: TextAlign.center
+        ),
       ),
       // bottomNavigationBar: ,
       // floatingActionButton: ,
