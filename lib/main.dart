@@ -54,29 +54,6 @@ class BasicPage extends StatelessWidget {
 }
 
  Image fromAssetImage({required double height, required double width}) {
-    var brightness = Theme.of(context).brightness;
-    // print("size=$size platform=$platform brightness=$brightness");
-    return Scaffold(
-      // appBar: ,
-      body: Center (
-        //child: fromAssetImage(height: size.height, width: size.width)
-        //child: fromNetworkImage()
-        child: Image.asset(
-          "images/beach.jpg", // à définir dans le pubspec.yaml
-          fit: BoxFit.fill,
-          height: 150,
-          width: 300,        
-        )
-      )
-      // bottomNavigationBar: ,
-      // floatingActionButton: ,
-      // bottomSheet: ,
-      // drawer: ,
-    );
-  }
-}
-
- Image fromAssetImage({required double height, required double width}) {
     return Image.asset(
       "images/beach.jpg", // à définir dans le pubspec.yaml
       fit: BoxFit.cover,
