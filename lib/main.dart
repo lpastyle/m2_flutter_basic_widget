@@ -61,9 +61,11 @@ class BasicPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     fromAssetImage(height: 80, width: 80),
-                    simpleText("Ligne"),
+                    Expanded(
+                      child: simpleText("Ligne")
+                      ),
                     const Icon(Icons.home, size: 30,)
-                ]),
+                  ]),
                 fromNetworkImage(),
                 demoRichText()
               ])
