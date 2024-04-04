@@ -65,6 +65,13 @@ class BasicPage extends StatelessWidget {
                       ),                
                   ],
                 ),
+                const Divider(
+                  color: Colors.grey,
+                  height: 40,
+                  thickness: 2,
+                  indent: 20,
+                  endIndent: 15,
+                ),
                 Row (
                   mainAxisAlignment: MainAxisAlignment.start,
                   mainAxisSize: MainAxisSize.max,
