@@ -66,6 +66,7 @@ class BasicPage extends StatelessWidget {
                       backgroundColor: Colors.redAccent,
                       // foregroundImage: NetworkImage("https://images.pexels.com/photos/1756086/pexels-photo-1756086.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"),                  
                       foregroundImage: AssetImage("images/beach.jpg"),
+                      // child: Text("LP"),
                     ),
                     Expanded(
                       child: simpleText("Ligne")
