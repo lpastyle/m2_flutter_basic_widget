@@ -60,7 +60,13 @@ class BasicPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    fromAssetImage(height: 80, width: 80),
+                    // fromAssetImage(height: 80, width: 80),
+                    const CircleAvatar(
+                      radius: 40,
+                      backgroundColor: Colors.redAccent,
+                      // foregroundImage: NetworkImage("https://images.pexels.com/photos/1756086/pexels-photo-1756086.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"),                  
+                      foregroundImage: AssetImage("images/beach.jpg"),
+                    ),
                     Expanded(
                       child: simpleText("Ligne")
                       ),
