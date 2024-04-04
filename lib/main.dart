@@ -40,7 +40,20 @@ class BasicPage extends StatelessWidget {
         color: Colors.orangeAccent,
         //margin: const EdgeInsets.all(10),
         margin: const EdgeInsets.only(left:10, top:50),
-        child: const Text.rich(
+        child: demoRichText() 
+      ),
+      // bottomNavigationBar: ,
+      // floatingActionButton: ,
+      // bottomSheet: ,
+      // drawer: ,
+    );
+  }
+
+
+}
+
+Text demoRichText() {
+  return const Text.rich(
           TextSpan(
             text: "premier mot\n",
             style: TextStyle(color: Colors.red, fontSize: 24),
@@ -56,17 +69,9 @@ class BasicPage extends StatelessWidget {
             ]
           ),
         textAlign: TextAlign.center
-        ),
-      ),
-      // bottomNavigationBar: ,
-      // floatingActionButton: ,
-      // bottomSheet: ,
-      // drawer: ,
-    );
-  }
-
-
+        );
 }
+
 
  Text simpleText(String text) {
   return  Text(
