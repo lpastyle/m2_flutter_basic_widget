@@ -162,3 +162,16 @@ Text demoRichText() {
           textAlign: TextAlign.center,
         );
  }
+
+ SingleChildScrollView demoScroll() {
+  return
+  const SingleChildScrollView(
+    child: Column(
+      children: [
+        Text("Premier mot"),
+        /*
+         * Autres widget occupant de l'espacement vertical
+         */
+      ],)
+  );
+ }
