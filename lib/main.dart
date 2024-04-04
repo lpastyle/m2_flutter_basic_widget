@@ -31,9 +31,17 @@ class BasicPage extends StatelessWidget {
     var platform = Theme.of(context).platform;
     var brightness = Theme.of(context).brightness;
     // print("size=$size platform=$platform brightness=$brightness");
-    return const Scaffold(
+    return  Scaffold(
       // appBar: ,
-      body:  Text('Hello World !')
+      body: Container(
+        height: 300,  // size.height
+        width: 100.5,  // size.width
+        //color: const Color.fromARGB(255, 200, 35, 78),
+        color: Colors.orangeAccent,
+        margin: const EdgeInsets.all(10),
+        //margin: const EdgeInsets.only(left:10)
+        child: const Text("Hello World !")
+      ),
       // bottomNavigationBar: ,
       // floatingActionButton: ,
       // bottomSheet: ,
