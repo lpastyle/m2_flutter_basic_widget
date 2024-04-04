@@ -48,12 +48,22 @@ class BasicPage extends StatelessWidget {
           elevation: 15,
           child: Padding(
             padding: const EdgeInsets.all(20),
+            // mettre Row pour montrer le débordement
             child: Column (
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text("demo column,"),
+                Row (
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    fromAssetImage(height: 80, width: 80),
+                    simpleText("Ligne"),
+                    const Icon(Icons.home, size: 30,)
+                ]),
                 fromNetworkImage(),
                 demoRichText()
               ])
