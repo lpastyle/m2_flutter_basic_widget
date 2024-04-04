@@ -62,8 +62,7 @@ class BasicPage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(top: 160),
                       child: profilePicture()
-                      ),
-                    
+                      ),                
                   ],
                 ),
                 Row (
