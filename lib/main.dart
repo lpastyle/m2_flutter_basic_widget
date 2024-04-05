@@ -73,6 +73,7 @@ class BasicPage extends StatelessWidget {
                     indent: 20,
                     endIndent: 15,
                   ),
+
                   // demo box decoration
                   Container(
                       margin: const EdgeInsets.all(20),
@@ -91,14 +92,10 @@ class BasicPage extends StatelessWidget {
                             blurRadius: 2,
                             spreadRadius: 1,
                           ),
-                        ],
-                        //shape: BoxShape.circle,
+                        ],                
                         borderRadius: BorderRadius.all(Radius.circular(15)),
-
                       ),
-                      child: const Text("Container"),
-
-
+                      child: const Text("Demo box decoration"),
                     ),
 
 
